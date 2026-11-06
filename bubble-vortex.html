@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bubble Vortex - Voltfox Games</title>
+<meta name="description" content="Bubble Vortex is a bubble shooter turned inside out: walls of bubbles close in from every side and you fire from the core. Free on Android, coming soon.">
+<link rel="icon" href="img/bv/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bubble-vortex.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="index.html"><img src="img/bv/fox-mark.png" alt="" width="36" height="36"><span>Voltfox Games</span></a>
+  <nav aria-label="Page">
+    <a href="#how">How it plays</a>
+    <a href="#powers">Power-ups</a>
+    <a href="#cost">Cost</a>
+    <a href="#questions">Questions</a>
+  </nav>
+  <a class="btn btn-small" href="#launch">Get told at launch</a>
+</header>
+
+<main>
+
+<section class="hero" aria-labelledby="title">
+  <div class="hero-copy">
+    <h1 id="title" data-rise>Bubble Vortex</h1>
+    <p class="lead" data-rise>A bubble shooter turned inside out. Walls of bubbles close in from every side, and you fire from the core.</p>
+    <p class="when" data-rise>Free on Android. Coming soon.</p>
+    <a class="btn" data-rise href="#launch">Email me at launch</a>
+    <p class="hero-links" data-rise><a href="#how">How a level plays</a><a href="#powers">The five power-ups</a><a href="#questions">Questions</a></p>
+  </div>
+  <div class="hero-stage">
+    <div class="disc" aria-hidden="true"></div>
+    <figure class="board-wrap">
+      <div class="board" id="board" tabindex="0" role="application"
+           aria-label="A playable ring of bubbles round the core. Left and right arrows aim, Space fires. Three of a colour pop.">
+        <img class="sky is-on" src="img/bv/sky-teal.jpg" alt="" width="900" height="900">
+        <img class="sky" src="img/bv/sky-ember.jpg" alt="" width="900" height="900" loading="lazy">
+        <img class="sky" src="img/bv/sky-ice.jpg" alt="" width="900" height="900" loading="lazy">
+        <img class="sky" src="img/bv/sky-jade.jpg" alt="" width="900" height="900" loading="lazy">
+        <img class="still" src="img/bv/shot-01-verb.jpg" alt="Level 1 of Bubble Vortex: the core in the middle of the screen, a shot flying out to a row of yellow star bubbles" width="900" height="900">
+        <img class="core" src="img/bv/core.png" alt="" width="256" height="256">
+      </div>
+      <figcaption><span id="board-status">Tap to fire. Three of a colour pop.</span>
+        <button type="button" class="again" id="again" hidden>Play again</button></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="how" id="how" aria-labelledby="how-h">
+  <div class="field f-surface">
+    <h2 id="how-h" data-rise>How a level plays</h2>
+    <img class="ring-pic" data-rise src="img/bv/shot-01-verb.jpg" alt="Aim dots running from the core to a row of yellow star bubbles on level 1" width="900" height="900" loading="lazy">
+    <p class="clause" data-rise>First, aim from the core.</p>
+  </div>
+  <div class="field f-blue">
+    <img class="ring-pic" data-rise src="img/bv/shot-02-pop.jpg" alt="A big match bursting next to the core on level 11, with VORTEX! across the board" width="900" height="900" loading="lazy">
+    <p class="clause" data-rise>Match three and they pop.</p>
+  </div>
+  <div class="field f-yellow">
+    <img class="ring-pic" data-rise src="img/bv/shot-05-surge.jpg" alt="A wall of the siege glowing before a surge on level 8, on an amber sky" width="900" height="900" loading="lazy">
+    <p class="clause" data-rise>Then the siege fights back.</p>
+  </div>
+  <div class="field f-white">
+    <img class="ring-pic" data-rise src="img/bv/shot-08-win.jpg" alt="The Siege Broken card: three stars, a score of 1,871 and 52 coins" width="900" height="900" loading="lazy">
+    <p class="clause" data-rise>Clear it and the siege breaks.</p>
+  </div>
+</section>
+
+<section class="powers" id="powers" aria-labelledby="powers-h">
+  <div class="powers-head">
+    <h2 id="powers-h" data-rise>Five power‑ups</h2>
+    <p data-rise>Two you take into a level, three you use during one. Each is offered only on the levels where it earns its price.</p>
+  </div>
+  <ul class="specimens">
+    <li data-rise><div class="tile f-yellow"><img src="img/bv/pu-freeze.png" alt="The Freeze icon: a snowflake in a bubble" width="480" height="480" loading="lazy"></div>
+      <h3>Freeze</h3><p>Before a level. The siege starts frozen.</p></li>
+    <li class="wide" data-rise><div class="tile f-teal"><img src="img/bv/pu-photon.png" alt="The Photon Beam icon: a beam across a violet badge" width="480" height="480" loading="lazy"></div>
+      <h3>Photon Beam</h3><p>Before a level. Stays on all level: every 10th shot is a beam that burns a straight line through the siege.</p></li>
+    <li data-rise><div class="tile f-blue"><img src="img/bv/pu-bomb.png" alt="The Bomb icon: a round bomb with a lit fuse" width="480" height="480" loading="lazy"></div>
+      <h3>Bomb</h3><p>During a level. Your next shot pops everything around it.</p></li>
+    <li data-rise><div class="tile f-teal"><img src="img/bv/pu-prism.png" alt="The Prism icon: a bubble split into every colour" width="480" height="480" loading="lazy"></div>
+      <h3>Prism</h3><p>During a level. Your next shot matches any colour.</p></li>
+    <li data-rise><div class="tile f-yellow"><img src="img/bv/pu-shockwave.png" alt="The Core Blast icon: a star burst inside a ring of bubbles" width="480" height="480" loading="lazy"></div>
+      <h3>Core Blast</h3><p>During a level. Clears the inner layer of the siege.</p></li>
+  </ul>
+</section>
+
+<section class="lineup" aria-labelledby="lineup-h">
+  <h2 id="lineup-h" data-rise>Every level plays differently</h2>
+  <div class="lineup-group">
+    <h3 class="day">World 1</h3>
+    <dl>
+      <div class="row" data-rise><dt>Siege</dt><dd>Bubbles close in from all four walls.</dd><dd class="lvl">Level 1</dd></div>
+      <div class="row" data-rise><dt>Stone</dt><dd>Never matches. Cut it loose to drop it.</dd><dd class="lvl">Level 2</dd></div>
+      <div class="row" data-rise><dt>Ice</dt><dd>Pop next to it to crack the ice.</dd><dd class="lvl">Level 3</dd></div>
+      <div class="row" data-rise><dt>Chameleon</dt><dd>Changes colour every few seconds.</dd><dd class="lvl">Level 4</dd></div>
+      <div class="row" data-rise><dt>Seed</dt><dd>The siege grows faster round it.</dd><dd class="lvl">Level 5</dd></div>
+      <div class="row" data-rise><dt>Drop</dt><dd>Bubbles hang from the top. Shoot up.</dd><dd class="lvl">Level 6</dd></div>
+      <div class="row" data-rise><dt>Spark bubble</dt><dd>Bursts and pops everything around it.</dd><dd class="lvl">Level 7</dd></div>
+      <div class="row" data-rise><dt>Surge</dt><dd>A glowing wall: growth is coming.</dd><dd class="lvl">Level 8</dd></div>
+    </dl>
+  </div>
+  <div class="lineup-group">
+    <h3 class="day">World 2</h3>
+    <dl>
+      <div class="row" data-rise><dt>Spinner</dt><dd>Every hit turns the bubbles round the core.</dd><dd class="lvl">Level 12</dd></div>
+      <div class="row" data-rise><dt>Bumpers</dt><dd>Glowing bumpers bounce your shots.</dd><dd class="lvl">Level 13</dd></div>
+      <div class="row" data-rise><dt>Gravity flip</dt><dd>What the new walls can't hold falls away.</dd><dd class="lvl">Level 18</dd></div>
+    </dl>
+  </div>
+  <div class="lineup-group">
+    <h3 class="day">World 3 and beyond</h3>
+    <dl>
+      <div class="row" data-rise><dt>All of it</dt><dd>World 3 mixes every rule above.</dd><dd class="lvl">Levels 21-30</dd></div>
+      <div class="row" data-rise><dt>Deep Space</dt><dd>Endless boards, a little harder each lap.</dd><dd class="lvl">From 31</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="road" aria-labelledby="road-h">
+  <ul class="tiles">
+    <li class="cell t-teal" data-rise><h2 id="road-h" class="word">Long road</h2><span class="cap">From level 1 to deep space</span></li>
+    <li class="cell pic" data-rise><img src="img/bv/shot-07-map.jpg" alt="The saga map: cleared levels with stars, level 8 next, a world chest up the road" width="900" height="900" loading="lazy"><span class="cap">The saga map</span></li>
+    <li class="cell t-yellow" data-rise><span class="word">30</span><span class="cap">designed levels</span></li>
+    <li class="cell pic t-yellow" data-rise><video src="img/bv/chest-open.mp4" poster="img/bv/chest-poster.jpg" muted loop playsinline preload="none" width="480" height="480" aria-label="A world chest shaking, then its lid swinging open on a heap of coins and gems"></video><span class="cap">A chest every 5 levels</span></li>
+    <li class="cell t-red" data-rise><span class="word">3</span><span class="cap">stars on every level</span></li>
+    <li class="cell t-white" data-rise><span class="word">7</span><span class="cap">days of daily rewards</span></li>
+    <li class="cell pic t-blue" data-rise><img class="obj" src="img/bv/skin-gold.png" alt="The gold core skin: a polished gold ring" width="420" height="420" loading="lazy"><span class="cap">Core skins</span></li>
+    <li class="cell t-teal" data-rise><span class="word">6</span><span class="cap">colours, each with a shape</span></li>
+    <li class="cell pic t-white" data-rise>
+      <span class="shapes"><img src="img/bv/bubble-blue.png" alt="Blue bubble with a circle" width="128" height="128" loading="lazy"><img src="img/bv/bubble-cyan.png" alt="Cyan bubble with a plus" width="128" height="128" loading="lazy"><img src="img/bv/bubble-green.png" alt="Green bubble with a square" width="128" height="128" loading="lazy"><img src="img/bv/bubble-purple.png" alt="Purple bubble with a diamond" width="128" height="128" loading="lazy"><img src="img/bv/bubble-red.png" alt="Red bubble with a triangle" width="128" height="128" loading="lazy"><img src="img/bv/bubble-yellow.png" alt="Yellow bubble with a star" width="128" height="128" loading="lazy"></span>
+      <span class="cap">Shapes for colour-blind play</span></li>
+    <li class="cell t-blue" data-rise><span class="word">&infin;</span><span class="cap">Deep Space boards</span></li>
+    <li class="cell pic" data-rise><img src="img/bv/shot-03-twist.jpg" alt="A Spinner level: a round cluster of red, yellow and green bubbles turning round the core" width="900" height="900" loading="lazy"><span class="cap">Spinner, level 12</span></li>
+    <li class="cell t-red" data-rise><span class="word">0</span><span class="cap">accounts or logins</span></li>
+  </ul>
+</section>
+
+<section class="band" aria-labelledby="band-h">
+  <h2 id="band-h" data-rise>No account. No login. No chat.</h2>
+  <p data-rise>Your progress is saved on your phone, and the game never asks where you are.</p>
+</section>
+
+<section class="cost" id="cost" aria-labelledby="cost-h">
+  <div class="plan plan-free">
+    <h2 id="cost-h" data-rise>Free</h2>
+    <p class="who" data-rise>For everyone: every level, every mode, every power-up.</p>
+    <p class="incl" data-rise>Short ad breaks come between levels. Rewarded ads are always your choice. Coin and gem packs are there if you want them; you never need them.</p>
+    <div class="plan-foot"><p class="price" data-rise>$0<span>forever</span></p><a class="btn" href="#launch">Email me at launch</a></div>
+  </div>
+  <div class="plan plan-noads">
+    <h3 data-rise>No ads</h3>
+    <p class="who" data-rise>For players who would rather skip the breaks.</p>
+    <p class="incl" data-rise>One purchase removes the ad breaks between levels for good. Rewarded ads stay optional. Restore it any time from the store. No subscriptions, ever.</p>
+    <div class="plan-foot"><p class="price" data-rise>$2.99<span>once</span></p><a class="text-link" href="#questions">Purchases, answered</a></div>
+  </div>
+</section>
+
+<section class="faq" id="questions" aria-labelledby="faq-h">
+  <h2 id="faq-h" data-rise>Questions</h2>
+  <div class="faq-list">
+    <details name="faq" open data-rise><summary>When can I play it?</summary><p>Bubble Vortex is in testing now. It comes to Google Play first. Leave your address below and the studio writes once, on the day it is out.</p></details>
+    <details name="faq" data-rise><summary>Which phones does it run on?</summary><p>Android phones running Android 8.0 or newer. It is made for one thumb in portrait.</p></details>
+    <details name="faq" data-rise><summary>Is there an iPhone version?</summary><p>Not at launch. Android comes first.</p></details>
+    <details name="faq" data-rise><summary>What does it cost?</summary><p>Nothing. It is free, with short ad breaks between levels. A one-time $2.99 purchase removes them, and coin and gem packs are optional. There are no subscriptions.</p></details>
+    <details name="faq" data-rise><summary>Can I play if I am colour-blind?</summary><p>Yes. Every colour also carries its own shape: circle, plus, square, diamond, triangle and star.</p></details>
+    <details name="faq" data-rise><summary>How many levels are there?</summary><p>Thirty designed levels across three worlds, then Deep Space: endless boards that get a little harder each lap.</p></details>
+    <details name="faq" data-rise><summary>Do I need an account?</summary><p>No. There is no login, no chat and no location permission. Your progress is saved on your phone.</p></details>
+    <details name="faq" data-rise><summary>Who makes it?</summary><p>Voltfox Games, a small independent studio in Michigan. Write to support@voltfoxgames.com with anything at all.</p></details>
+  </div>
+</section>
+
+<section class="launch" id="launch" aria-labelledby="launch-h">
+  <form id="launch-form" action="mailto:support@voltfoxgames.com" method="get">
+    <h2 id="launch-h" class="blank-sentence">Write to <input id="email" name="email" type="email" autocomplete="email" placeholder="you@mail" aria-label="Your email address" required> at <button type="submit">launch</button></h2>
+    <p class="after">This opens your mail app with a short note to the studio. One email when the game is out, nothing more.</p>
+  </form>
+</section>
+
+</main>
+
+<footer class="foot">
+  <a class="mark" href="#title" aria-label="Bubble Vortex, back to the top">
+    <span class="b c1" style="--s:1">B</span><span class="b c2" style="--s:0.9">U</span><span class="b c3" style="--s:0.8">B</span><span class="b c4" style="--s:0.7">B</span><span class="b c5" style="--s:0.62">L</span><span class="b c1" style="--s:0.55">E</span><span class="gap"></span><span class="b c2" style="--s:0.55">V</span><span class="b c3" style="--s:0.62">O</span><span class="b c4" style="--s:0.7">R</span><span class="b c5" style="--s:0.8">T</span><span class="b c1" style="--s:0.9">E</span><span class="b c2" style="--s:1">X</span>
+  </a>
+  <div class="foot-cols">
+    <ul><li><a href="games.html">All games</a></li><li><a href="coming-soon.html">Coming soon</a></li></ul>
+    <ul><li><a href="about.html">About the studio</a></li><li><a href="index.html">Voltfox home</a></li></ul>
+    <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+    <address>Voltfox Games LLC, Michigan<br><a href="mailto:support@voltfoxgames.com">support@voltfoxgames.com</a></address>
+  </div>
+  <div class="foot-last"><p>&copy; 2026 Voltfox Games LLC</p><a class="btn btn-small" href="#title">Back to the top</a></div>
+</footer>
+
+<script src="bubble-vortex.js" defer></script>
+</body>
+</html>
